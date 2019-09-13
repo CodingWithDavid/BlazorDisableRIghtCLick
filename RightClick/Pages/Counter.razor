@@ -1,0 +1,20 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @oncontextmenu="(e => IncrementCount(e))" >Right Click me</button>
+
+<section style="padding-top:50px">
+    <h1>Try a right click here</h1>
+</section>
+
+@code {
+    int currentCount = 0;
+
+    void IncrementCount(MouseEventArgs args)
+    {
+        currentCount++;
+    }
+}
